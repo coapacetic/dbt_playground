@@ -7,13 +7,13 @@ sources:
     tables:
       - name: customers
 
-  - name: jaffle_shop_S3
+  - name: jaffle_shop_s3
+    schema: dbt_kcoapman
     tables:
       - name: customers                            
         external:
-          location: https://dbt-tutorial-public.s3-us-west-2.amazonaws.com/jaffle_shop_customers.csv
-          database: analytics
-          schema: dbt_kcoapman
+          location: "@analytics.dbt_kcoapman.my_customers"
+          file_format: "csv"
         columns:
           - name: id
             data_type: varchar(255)
