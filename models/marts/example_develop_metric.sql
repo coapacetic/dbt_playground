@@ -1,3 +1,9 @@
+{{
+    config(
+        enabled=false
+    )
+}}
+
 {% set my_metric_yml -%}
 
 metrics:
