@@ -1,7 +1,6 @@
-{% set pr_override_schema = 'my_pr_schema' %}
-
 {% macro generate_schema_name(custom_schema_name, node) -%}
 
+    {% set my_pref_schema = 'my_pr_schema' %}
     {%- set default_schema = target.schema -%}
     {%- if target.name == 'prod' and custom_schema_name is not none -%}
 
@@ -9,12 +8,16 @@
 
     {%- elif target.name == 'ci' -%}
 
-        {{ pr_override_schema }}
+        {{ my_pref_schema }}
 
     {%- else -%}
 
         {{ default_schema }}
-
+        
     {%- endif -%}
 
 {%- endmacro %}
+
+
+
+
