@@ -1,3 +1,5 @@
+-- hey there! I made some tweaks to this file!
+
 with customers as (
 
     select * from {{ ref('stg_customers') }}
