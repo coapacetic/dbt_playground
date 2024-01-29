@@ -1,5 +1,11 @@
 version: 2
 
+groups:
+  - name: downstream_access
+    owner:
+      name: Kyle Coapman
+      email: kcoapman@dbtlabs.com
+
 models:
   - name: orders
     description: This table has basic information about orders, as well as some derived facts based on payments
