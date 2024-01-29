@@ -23,3 +23,4 @@ models:
   jaffle_shop_metrics:
     marts:
       +schema: marts
+      +group: downstream_access

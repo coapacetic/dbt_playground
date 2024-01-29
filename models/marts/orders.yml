@@ -3,7 +3,7 @@ version: 2
 models:
   - name: orders
     description: This table has basic information about orders, as well as some derived facts based on payments
-
+    access: public
     columns:
       - name: order_id
         tests:
